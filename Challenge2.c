@@ -55,7 +55,7 @@ status_t string_to_date_converter(char* input_string, my_date_t* result_date)
 			else 
 			     return 0;
 		}
-		result_date->date=l_date;
+		result_date->date=(uint8_t)l_date;
 		for(int i=3;i<=4;i++)
 		{
 			if(input_string[i]>=48 && input_string[i]<=57)
@@ -64,7 +64,7 @@ status_t string_to_date_converter(char* input_string, my_date_t* result_date)
 			else 
 			     return 0;
 		}
-		result_date->month=l_month;
+		result_date->month=(uint8_t)l_month;
 		for(int i=6;i<=9;i++)
 		{
 			if(input_string[i]>=48 && input_string[i]<=57)
@@ -73,7 +73,7 @@ status_t string_to_date_converter(char* input_string, my_date_t* result_date)
 			else 
 			     return 0;
 		}
-		result_date->year=l_year;
+		result_date->year=(uint16_t)l_year;
   }
 	return 1;
 }
